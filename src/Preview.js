@@ -14,7 +14,7 @@ import TimerIcon from '@material-ui/icons/Timer';
 import SendIcon from '@material-ui/icons/Send';
 import { v4 as uuid } from 'uuid';
 import { db, storage } from './firebase';
-import firebase from 'firebase';
+import firebase from "firebase";
 import './Preview.css';
 
 const Preview = () => {
@@ -31,7 +31,7 @@ const Preview = () => {
         const id = uuid();
         const uploadTask = storage.ref(`posts/${id}`).putString(cameraImage, 'data_url');
 
-        uploadTask.on('state_changed', null, (erorr) => {
+        uploadTask.on('state_changed', null, (error) => {
             console.log(error)
         }, 
         () => {
