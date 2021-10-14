@@ -27,7 +27,7 @@ const Chats = () => {
             id: doc.id,
             data: doc.data(),
         }))))
-    }, [])
+    }, []);
 
     return (
         <div className='chats'>
@@ -52,7 +52,6 @@ const Chats = () => {
                     />
                 ))}
             </div>
-
             <RadioButtonUncheckedIcon 
                 className='chats__takePicIcon'
                 onClick={takeSnap}

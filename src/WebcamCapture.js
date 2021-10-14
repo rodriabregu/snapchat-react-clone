@@ -1,4 +1,4 @@
-import { useRef, useCallback, useState } from "react";
+import { useRef, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import Webcam from "react-webcam";
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
@@ -16,7 +16,7 @@ const WebcamCapture = () => {
     const webcamRef = useRef(null);
     const dispatch = useDispatch();
     const history = useHistory();
-    const [image, setImage] = useState(null);
+    // const [image, setImage] = useState(null);
 
     const capture = useCallback(() => {
         const imageSrc = webcamRef.current.getScreenshot();
